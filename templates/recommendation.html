@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Prediction</title>
+</head>
+
+<body>
+    <div class="back">
+        <nav>
+            <h1 class="head">Loan Predictor</h1>
+            <ul>
+                <li><a href="#" class="nav-links">About</a></li>
+                <li><a href="./prediction" class="nav-links">Prediction</a></li>
+                <li><a href="./recommendation" class="nav-links">Recommendations</a></li>
+            </ul>
+        </nav>
+        <div class="container"><br>
+            <h1 class="head2">Recommended Finantial Organizations</h1>
+            <table>
+                <tr>
+                    <th>Organization</th>
+                    <th>Contact</th>
+                    <th>Loan Terms</th>
+                </tr>
+                {% if LA>50 and LA<4000 %}
+                <tr>
+                    <td>SBI Personal Loan</td>
+                    <td><a href="https://sbi.co.in/web/personal-banking/loans/personal-loans">Apply for personal loan</a></td>
+                    <td><a href="https://www.bankbazaar.com/personal-loan/top-personal-loan-finance-companies-in-india.html">SBI Personal Loan Eligibility Criteria</a></td>
+                </tr>
+                {% endif %}
+                {% if LA>100 and LA<3000 %}
+                <tr>
+                    <td>Axis Bank Personal Loan</td>
+                    <td><a href="https://sbi.co.in/web/personal-banking/loans/personal-loans">Apply for personal loan</a></td>
+                    <td><a href="https://www.bankbazaar.com/personal-loan/top-personal-loan-finance-companies-in-india.html">Axis Personal Loan Eligibility Criteria</a></td>
+                </tr>
+                {% endif %}
+                {% if LA<1000 %}
+                <tr>
+                    <td>TurboLoan by cholamandalam personal loan</td>
+                    <td><a href="https://induseasycredit.indusind.com/customer/personal-loan/lead?utm_code=z_mktgcamp&utm_campaign=ind_pl&utm_source=intellect&utm_medium=display_437&utm_content=mailer">Apply for personal loan</a></td>
+                    <td><a href="https://www.bankbazaar.com/personal-loan/top-personal-loan-finance-companies-in-india.html">TurboLoan Personal Loan Eligibility Criteria</a></td>
+                </tr>
+                {% endif %}
+                {% if LA>50 and LA<1000 %}
+                <tr>
+                    <td>IDBI Bank Personal Loan</td>
+                    <td><a href="https://www.idbibank.in/personal-loan.aspx">Apply for personal loan</a></td>
+                    <td><a href="https://www.bankbazaar.com/personal-loan/top-personal-loan-finance-companies-in-india.html">IDBI Bank Personal Loan Eligibility Criteria</a></td>
+                </tr>
+                {% endif %}
+                {% if LA>100 and LA<2000 %}
+                <tr>
+                    <td>PNB Personal Loan</td>
+                    <td><a href="https://www.pnbindia.in/personal.html">Apply for personal loan</a></td>
+                    <td><a href="https://www.bankbazaar.com/personal-loan/top-personal-loan-finance-companies-in-india.html">PNB Bank Personal Loan Eligibility Criteria</a></td>
+                </tr>
+                {% endif %}
+                {% if LA<600 %}
+                <tr>
+                    <td>Canara Bank Personal Loan</td>
+                    <td><a href="https://canarabank.com/User_page.aspx?menulevel=1&menuid=3&CatID=26">Apply for personal loan</a></td>
+                    <td><a href="https://www.bankbazaar.com/personal-loan/top-personal-loan-finance-companies-in-india.html">Canara Bank Personal Loan Eligibility Criteria</a></td>
+                </tr>
+                {% endif %}
+                {% if LA<600 %}
+                <tr>
+                    <td>Mahindra Finance Personal Loan</td>
+                    <td><a href="https://www.mahindrafinance.com/apply-now?t=pr">Apply for personal loan</a></td>
+                    <td><a href="https://www.bankbazaar.com/personal-loan/top-personal-loan-finance-companies-in-india.html">Mahindra Bank Personal Loan Eligibility Criteria</a></td>
+                </tr>
+                {% endif %}
+                {% if LA<1000 %}
+                <tr>
+                    <td>Indian Overseas Bank Personal Loan</td>
+                    <td><a href="https://www.dialabank.com/personal-loan/indian-overseas-bank-personal-loan/">Apply for personal loan</a></td>
+                    <td><a href="https://www.bankbazaar.com/personal-loan/top-personal-loan-finance-companies-in-india.html">Indian Overseas Bank Personal Loan Eligibility Criteria</a></td>
+                </tr>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+</body>

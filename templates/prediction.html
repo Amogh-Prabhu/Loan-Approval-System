@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Prediction</title>
+</head>
+
+<body>
+    <style>
+        #status {
+            color:{{ color }};
+        }
+    </style>
+    <div class="back">
+        <nav>
+            <h1 class="head">Loan Predictor</h1>
+            <ul>
+                <li><a href="#" class="nav-links">About</a></li>
+                <li><a href="./prediction" class="nav-links">Prediction</a></li>
+                <li><a href="./recommendation" class="nav-links">Recommendations</a></li>
+            </ul>
+        </nav>
+        <div class="container"><br>
+            <h1 class="head1" id="status">There is a {{ data }}% chance of your loan approval.</h1>
+            <h1 class="head1" style="font-size: 200%; width: 80%; margin-left: auto;margin-right: auto;">
+                You can check out the recommendations section to know the best places to apply for your loan
+            </h2>
+        </div>
+    </div>
+</body>

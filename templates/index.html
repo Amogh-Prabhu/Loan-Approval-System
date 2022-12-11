@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <div class="back">
+        <nav>
+            <h1 class="head">Loan Predictor</h1>
+            <ul>
+                <li><a href="#" class="nav-links">About</a></li>
+                <li><a href="./prediction" class="nav-links">Prediction</a></li>
+                <li><a href="./recommendation" class="nav-links">Recommendations</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <form action="./userdetails" method="post">
+                <h1 class="head2">Enter your details</h1>
+                <label>Full Name (As per Pan Card)</label>
+                <input type="text" class="inputText" required/>
+                <br/>
+                <br/>
+                
+                <label>Date of Birth</label>
+                <input type="date" class="inputText" required/>
+                
+                <br/>
+                <br/>
+                <label>Your Gender</label>
+                <br/>
+                <input type="radio" class="option" value="Male" name="gender"/>
+                <span></span>Male
+                <input type="radio" class="option" value="Female" name="gender"/>
+                <span></span>Female
+                
+                <br/>
+                <br/>
+                <label>Marriage Status</label>
+                <br/>
+                <input type="radio" class="option" value="Yes" name="marriage"/>
+                <span></span>Married
+                <input type="radio" class="option" value="No" name="marriage"/>
+                <span></span>Not Married
+
+                <br/>
+                <br/>
+                <label>Number of Dependants</label>
+                <input type="number" class="inputText" name="nod" required/>
+
+                <br/>
+                <br/>
+                <label>Education Level</label>
+                <br/>
+                <input type="radio" class="option" value="Graduate" name="graduation"/>
+                <span></span>Graduate
+                <input type="radio" class="option" value="Not-Graduate" name="graduation"/>
+                <span></span>Not-Graduate
+
+                <br/>
+                <br/>
+                <label>Self-Employed?</label>
+                <select class="inputText" name="self-emp">
+                    <option value="Choose" disabled selected >Select an option</option>
+                    <option value="Employed">Yes</option>
+                    <option value="NotEmployed">No</option>
+                </select>
+
+                <br/>
+                <br/>
+                <label>Select Property Area</label>
+                <select class="inputText" name="PA">
+                    <option value="Choose" disabled selected >Select an option</option>
+                    <option value="Urban">Urban</option>
+                    <option value="Semi-Urban">Semi-Urban</option>
+                    <option value="Rural">Rural</option>
+
+                </select>
+
+                <br/>
+                <br/>
+                <input type="submit" value="Next" class="button">
+            </form>
+
+            <img class="image" src="https://img.freepik.com/free-vector/money-lending-abstract-concept_335657-3053.jpg?w=2000" alt="">
+        </div>
+    </div>
+</body>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Money Details</title>
+</head>
+
+<body>
+    <div class="back">
+        <nav>
+            <h1 class="head">Loan Predictor</h1>
+            <ul>
+                <li><a href="#" class="nav-links">About</a></li>
+                <li><a href="./prediction" class="nav-links">Prediction</a></li>
+                <li><a href="./recommendation" class="nav-links">Recommendations</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <form action="moneydetails" method="post">
+                <h1 class="head2">Other Required Details:</h1>
+                <br/>
+                <label>Enter your annual income</label>
+                <input type="text" class="inputText" name="ApplicantIncome" required/>
+                <br/>
+
+                <br/>
+                <label>Enter loan amount</label>
+                <input type="text" class="inputText" name="LoanAmount" required/>
+                <br/>
+
+                <br/>
+                <label>Enter the duration for loan</label>
+                <input type="text" class="inputText" name="Loan_Amount_Term" required/>
+                <br/>
+
+                <br/>
+                <label>Enter your credit score</label>
+                <select name="Credit_History" class="inputText" id="">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </select>
+                <br>
+                <br>
+                <input type="submit" value="Submit" class="button">
+            </form>
+            <img class="image" src="https://thumbs.dreamstime.com/b/bank-client-getting-loan-bank-service-account-management-financial-affairs-themed-vector-illustration-smiling-cartoon-83540434.jpg" alt="">
+        </div>
+    </div>
+
+
+</body>
